@@ -21,8 +21,12 @@ mongoose.connect(
 
 // API Creation
 
-app.get("/", (req, res) => {
-  res.send("Express App is Running");
+app.get("/", (req, res,next) => {
+  return res.status(200).json({
+    success:true,
+    message:"Hello"
+  });
+ // res.send("Express App is Running");
 });
 
 //image Storage Engine
