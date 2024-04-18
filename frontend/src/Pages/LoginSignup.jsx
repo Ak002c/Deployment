@@ -37,7 +37,7 @@ const LoginSignup = () => {
   const Signup = async () => {
     console.log("Signup function executed", formData);
     let responseData;
-    await fetch("http://localhost:4000/signup", {
+    await fetch("https://dark-tan-drill-belt.cyclic.app/signup", {
       method: "POST",
       headers: {
         Accept: "application/form-data",
