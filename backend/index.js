@@ -9,7 +9,13 @@ const cors = require("cors");
 const { type } = require("os");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://dark-tan-drill-belt.cyclic.app"],
+    methods:["POST","GET"],
+    credential:true
+  }
+));
 
 // Database Connection with mongodb
 
